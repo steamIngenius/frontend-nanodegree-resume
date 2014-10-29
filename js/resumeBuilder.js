@@ -84,12 +84,12 @@ if ( bio.skills.length > 0 ) {
 // if there are jobs to be added
 if ( work.jobs.length > 0 ) {
 	// add dem jobs to workExperience
-	for ( i in work.jobs ) {
+	for ( job in work.jobs ) {
 		// add HTMLworkStart to workExperience for each job
 		// format each employer with HTMLworkEmployer and each job title with HTMLjobTitle
 		// use the :last selector to add the info to the correct .work-entry element (the last one appended)
-		var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[i].employer);
-		var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[i].title);
+		var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+		var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
 		$("#workExperience").append(HTMLworkStart);
 		$('.work-entry:last').append(formattedEmployer + formattedWorkTitle);
 	}
