@@ -18,7 +18,7 @@ var work = {
 };
 
 var projectData = {
-	projects : [
+	projects: [
 		{
 			"title" : "Dev Portfolio",
 			"dates" : "Oct 2014",
