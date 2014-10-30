@@ -32,9 +32,16 @@ var projectData = {
 			"images" : []
 		}
 	],
-	display: function() {
+	display: function() { // display these projects!!
 		for ( project in this.projects ) {
-			console.log(this.projects[project].title);
+			// to $('#projects')
+			// .append an HTMLprojectStart
+			$('#projects').append(HTMLprojectStart);
+			// .append all the rest of the project data to the last project-entry class element
+			$('.project-entry:last').append(HTMLprojectTitle.replace('%data%', this.projects[project].title));
+			$('.project-entry:last').append(HTMLprojectDates.replace('%data%', this.projects[project].dates));
+			$('.project-entry:last').append(HTMLprojectDescription.replace('%data%', this.projects[project].description));
+			$('.project-entry:last').append(HTMLprojectImage.replace('%data%', this.projects[project].image));
 		}
 	}
 };
@@ -115,5 +122,6 @@ var displayWork = function() {
 		}
 	}
 }
-
+// 
 displayWork();
+projectData.display();
