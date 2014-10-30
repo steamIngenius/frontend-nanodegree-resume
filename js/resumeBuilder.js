@@ -23,13 +23,13 @@ var projectData = {
 			"title" : "Dev Portfolio",
 			"dates" : "Oct 2014",
 			"description" : "Examples of projects I've built",
-			"images" : []
+			"images" : ['http://www.fillmurray.com/300/300']
 		},
 		{
 			"title" : "Living Resume",
 			"dates" : "Oct 2014",
 			"description" : "My Resume",
-			"images" : []
+			"images" : ['http://www.stevensegallery.com/300/300']
 		}
 	],
 	display: function() { // display these projects!!
@@ -41,7 +41,7 @@ var projectData = {
 			$('.project-entry:last').append(HTMLprojectTitle.replace('%data%', this.projects[project].title));
 			$('.project-entry:last').append(HTMLprojectDates.replace('%data%', this.projects[project].dates));
 			$('.project-entry:last').append(HTMLprojectDescription.replace('%data%', this.projects[project].description));
-			$('.project-entry:last').append(HTMLprojectImage.replace('%data%', this.projects[project].image));
+			$('.project-entry:last').append(HTMLprojectImage.replace('%data%', this.projects[project].images));
 		}
 	}
 };
@@ -125,3 +125,4 @@ var displayWork = function() {
 // 
 displayWork();
 projectData.display();
+$('#mapDiv').append(googleMap);
