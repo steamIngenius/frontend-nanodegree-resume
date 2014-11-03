@@ -110,28 +110,29 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
   if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.backgroundColor = "#000000";
+    // document.getElementById("topContacts").style.backgroundColor = "#000000";
+    document.getElementById("topContacts").style.visibility = "hidden";
   }
   if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.backgroundColor = "#000000";
+    document.getElementById("header").style.visibility = "hidden";
   }
   if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.backgroundColor = "#000000";
+    document.getElementById("workExperience").style.visibility = "hidden";
   }
   if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.backgroundColor = "#000000";
+    document.getElementById("projects").style.visibility = "hidden";
   }
   if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.backgroundColor = "#000000";
+    document.getElementById("education").style.visibility = "hidden";
   }
   if(document.getElementsByClassName("skills-entry").length === 0) {
-    document.getElementById("skillsChart").style.backgroundColor = "#000000";
+    document.getElementById("skillsChart").style.visibility = "hidden";
   }
   if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.backgroundColor = "#000000";
+    document.getElementById("letsConnect").style.visibility = "hidden";
   }
   if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.backgroundColor = "#000000";
+    document.getElementById("mapDiv").style.visibility = "hidden";
   }
   </script>
 </body>

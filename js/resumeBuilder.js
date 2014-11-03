@@ -37,19 +37,22 @@ var work = {
 	} // end of display function
 };
 
-var projectData = {
+var projects = {
 	projects: [
 		{
 			"title" : "Dev Portfolio",
 			"dates" : "Oct 2014",
-			"description" : "Examples of projects I've built",
-			"images" : ['http://www.fillmurray.com/300/300']
+			"description" : "Examples of projects I've built. Latter, this description will be updated to reflect some of the work that has gone into my portfolio.",
+			"images" : ['http://www.fillmurray.com/300/300',
+				'http://baconmockup.com/300/300',
+				'http://www.stevensegallery.com/300/300'
+			]
 		},
 		{
 			"title" : "Living Resume",
 			"dates" : "Oct 2014",
-			"description" : "My Resume",
-			"images" : ['http://www.stevensegallery.com/300/300']
+			"description" : "My Resume which will be updated as information becomes relevant.",
+			"images" : ['images/resume.png']
 		}
 	],
 	display: function() { // display these projects!!
@@ -61,22 +64,25 @@ var projectData = {
 			$('.project-entry:last').append(HTMLprojectTitle.replace('%data%', this.projects[project].title));
 			$('.project-entry:last').append(HTMLprojectDates.replace('%data%', this.projects[project].dates));
 			$('.project-entry:last').append(HTMLprojectDescription.replace('%data%', this.projects[project].description));
-			$('.project-entry:last').append(HTMLprojectImage.replace('%data%', this.projects[project].images));
+			for ( var image in this.projects[project].images ) {
+				$('.project-entry:last').append(HTMLprojectImage.replace('%data%', this.projects[project].images[image]));
+			}
 		}
-	}
-};
+	} // end of projects display function
+}; // end of projects object
 
 var bio = {
 	"name" : "Micah Hawkins",
 	"role" : "Web Developer",
 	"contacts" : { "email" : "micahbhawkins@gmail.com",
-			"mobile" : "",
-			"github" : "",
-			"twitter" : ""
+			"mobile" : "555-555-5555",
+			"github" : "/steamIngenius",
+			"twitter" : "@micah_hawkins",
+			"location" : "Portland, OR"
 		},
-	"pictureURL" : "http://www.fillmurray.com/200/200",
+	"pictureURL" : "http://www.fillmurray.com/140/140",
 	"welcomeMessage" : "Greetings!",
-	"skills" : [ "Troubleshooting", "WebDev", "Whatever OS", "Goobling Stuff", "RTFM" ],
+	"skills" : [ "Troubleshooting", "WebDev", "Whatever OS", "Goobling Stuff", "R'ingTFM" ],
 
 	// function to internationalize our name - moved to the bio object for encapsulation
 	inName: function() {
@@ -92,18 +98,23 @@ var bio = {
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
 		// this adds my name/role to the beginnging of the page, before any other sections
-		$("#main").prepend(formattedName + formattedRole);
+		$("#header").prepend(formattedName + formattedRole);
 
 		// the rest of our bio information will go into #header
 		$("#header").append(HTMLWelcomeMsg.replace('%data%', bio.welcomeMessage));
-		$("#header").append(HTMLemail.replace('%data%', bio.contact));
+
+		$("#topContacts").append(HTMLemail.replace('%data%', bio.contacts.email));
+		$('#topContacts').append(HTMLmobile.replace('%data%', bio.contacts.mobile));
+		$('#topContacts').append(HTMLgithub.replace('%data%', bio.contacts.github));
+		$('#topContacts').append(HTMLtwitter.replace('%data%', bio.contacts.twitter));
+		$('#topContacts').append(HTMLlocation.replace('%data%', bio.contacts.location));
+
 		$("#header").append(HTMLbioPic.replace('%data%', bio.pictureURL));
-		// $("#main").append(bio.skills);
+
 		// if there are skills to be added
 		if ( bio.skills.length > 0 ) {
 			// set up the page to receive skills
 			$("#header").append(HTMLskillsStart);
-
 			// add skills
 			for ( i in bio.skills ) {
 				var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
@@ -123,8 +134,25 @@ var education = {
 			"dates" : "Oct 2014",
 			"url" : "http://www.udacity.com"
 		}
-	]
-};
+	], // end of schools array
+	"onlineCourses" : [
+		{
+			"title" : "",
+			"school" : "",
+			"dates attended" : "",
+			"url": "	"
+		},
+		{
+			"title" : "",
+			"school" : "",
+			"dates attended" : "",
+			"url": "	"
+		}
+	], // end of online couses array
+	display: function() {
+
+	} // end of display function
+}; // end of education object
 
 
 // $("#main").append(internationalizeButton);
@@ -133,7 +161,7 @@ var education = {
 // display resume information
 bio.display();
 work.display();
-projectData.display();
+projects.display();
 
 // add our map!
 $('#mapDiv').append(googleMap);
