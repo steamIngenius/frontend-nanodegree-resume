@@ -51,7 +51,7 @@ var projects = {
 		{
 			"title" : "Living Resume",
 			"dates" : "Oct 2014",
-			"description" : "My Resume which will be updated as information becomes relevant.",
+			"description" : "My Resume which will be updated as information becomes relevant. This page, actually.",
 			"images" : ["images/resume.png"]
 		}
 	],
@@ -174,7 +174,7 @@ var education = {
 			$(".education-entry:last").append(HTMLonlineTitle.replace("%data%", this.onlineCourses[onlineCourse].title).replace("#", this.onlineCourses[onlineCourse].url) + HTMLonlineSchool.replace("%data%", this.onlineCourses[onlineCourse].school));
 			// dates attended
 			$(".education-entry:last").append(HTMLonlineDates.replace("%data%", this.onlineCourses[onlineCourse]["dates attended"]));
-		}
+		} // end of onlineClasses loop
 	} // end of display function
 }; // end of education object
 
