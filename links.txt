@@ -1,0 +1,7 @@
+http://validator.w3.org/
+http://github.com/steamIngenius
+https://www.udacity.com/course/ud804
+http://www.paulund.co.uk/image-placeholder-apis
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+https://developers.google.com/maps/documentation/javascript/reference#InfoWindow
+https://developers.google.com/maps/documentation/javascript/infowindows
