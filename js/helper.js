@@ -174,6 +174,11 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      // add the infoWindow in this event listener
+      // probably handy methods:
+      // infoWindow.open(map?:Map|StreetViewPanorama, anchor?:MVCObject)
+      // infoWindow.setContent(content:string|Node) - we don't actually need this since we already set the content in the constructor
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
