@@ -15,7 +15,7 @@
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: #B8B020;
   line-height: 48px;
   display: inline;
 }
@@ -31,7 +31,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #999999;
   line-height: 22px;
 }
 
@@ -55,6 +55,21 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: left;
+}
+
+.major-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+}
+
+.url-text {
+  line-height: 16px;
+  float: right;
+  color: #999999;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .location-text {
@@ -110,7 +125,7 @@ a {
 
 .gray {
   background-color: #F3F3F3;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   clear:both;
 }
 
@@ -120,7 +135,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #2D7959;
 }
 
 .flex-box {
@@ -133,7 +148,7 @@ a {
 }
 
 .center-content {
-  padding: 5%;
+  padding: 3%;
 }
 
 ul {
@@ -141,7 +156,12 @@ ul {
 }
 
 
+.project-image {
+  border-radius: 25px;
+}
+
 .biopic {
+  border-radius: 25px;
   float: left;
   padding: 10px;
   width: 200px;
