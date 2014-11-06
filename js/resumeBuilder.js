@@ -174,6 +174,8 @@ var education = {
 			$(".education-entry:last").append(HTMLonlineTitle.replace("%data%", this.onlineCourses[onlineCourse].title).replace("#", this.onlineCourses[onlineCourse].url) + HTMLonlineSchool.replace("%data%", this.onlineCourses[onlineCourse].school));
 			// dates attended
 			$(".education-entry:last").append(HTMLonlineDates.replace("%data%", this.onlineCourses[onlineCourse]["dates attended"]));
+			// URL
+			$(".education-entry:last").append(HTMLonlineURL.replace("#", this.onlineCourses[onlineCourse].url).replace("%data%", this.onlineCourses[onlineCourse].url));
 		} // end of onlineClasses loop
 	} // end of display function
 }; // end of education object
