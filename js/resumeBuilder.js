@@ -82,7 +82,7 @@ var bio = {
 		},
 	"pictureURL" : "http://www.fillmurray.com/140/140",
 	"welcomeMessage" : "Greetings!",
-	"skills" : [ "Troubleshooting", "WebDev", "Whatever OS", "Goobling Stuff", "R'ingTFM" ],
+	"skills" : [ "Troubleshooting", "WebDev", "Whatever OS", "Goobling Stuff", "RTFMing" ],
 
 	// function to internationalize our name - moved to the bio object for encapsulation
 	inName: function() {
